@@ -11,6 +11,9 @@ for  add  /product/add
 
  for adding please add same keys
 
+
+ 
+
  category:{type:String},
     title:{type:String},
     price:{type:String},
