@@ -4,8 +4,10 @@ const mongoose=require("mongoose")
 require('dotenv').config()
 const productRouter=require("./routes/product.routes")
 const commentRouter=require("./routes/comment.routes")
-app.use(express.json())
+const {ratelimiter}=require("./middleware/limiter")
 
+app.use(express.json())
+app.use(ratelimiter)
 app.use("/product",productRouter)
 app.use("/comment",commentRouter)
 
